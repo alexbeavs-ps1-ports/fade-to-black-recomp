@@ -6,7 +6,9 @@ name = "Fade to Black"
 id = "SLUS-00236"
 players = 1
 exe = "disc/SLUS_002.36"
-disc = ""
+disc = "disc/Fade to Black (USA) (En,Fr,De,Es,It).cue"
+discs = ["disc/Fade to Black (USA) (En,Fr,De,Es,It).cue"]
+disc_serials = ["SLUS-00236"]
 load_address = "0x80010800"
 entry_pc = "0x80011240"
 text_size = "0x00007000"
@@ -15,8 +17,8 @@ stack_base = "0x801FFFF0"
 # Digests are for data Track 01 (first BINARY FILE / TRACK 01).
 [prepare_disc]
 out_dir = "disc"
-bin_name = "disc1.bin"
-cue_name = "disc1.cue"
+bin_name = "Fade to Black (USA) (En,Fr,De,Es,It).bin"
+cue_name = "Fade to Black (USA) (En,Fr,De,Es,It).cue"
 boot_exe = "SLUS_002.36"
 known_sizes = [617261232]
 known_md5 = [
@@ -30,11 +32,13 @@ known_crc32 = [
 ]
 
 [recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
 seeds = "seeds/ghidra_funcs.txt"
 out_dir = "generated"
 strict = true
 
 [runtime]
+openbios = false
 window_title = "fade-to-black- Recompiled"
 memcard_dir = "saves"
 
